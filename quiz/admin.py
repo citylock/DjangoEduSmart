@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Category
+from .models import Category, Quiz
 # Register your models here.
 
 class CategoryAdmin(admin.ModelAdmin):
@@ -8,3 +8,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 admin.site.register(Category, CategoryAdmin)
 
+class QuizAdmin(admin.ModelAdmin):
+    list_display = ['title']
+
+admin.site.register(Quiz, QuizAdmin)
