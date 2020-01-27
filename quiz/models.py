@@ -17,3 +17,6 @@ class Category(models.Model):
         return '{}'.format(self.category)
 
 
+class Quiz(models.Model): 
+    title = models.CharField(max_length=200 unique=True)
+    
